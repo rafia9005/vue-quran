@@ -18,6 +18,9 @@
                 </dl>
             </div>
         </div>
+        <audio autoplay>
+            <source v-if="data" :src="getAudioSource(1)" type="audio/mp3">
+        </audio>
     </main>
 </template>
   
@@ -42,6 +45,12 @@ export default {
         } catch {
         }
     },
+    methods: {
+        getAudioSource(index) {
+            const key = index.toString().padStart(2, '0');
+            return this.data.audioFull[key] || "";
+        }
+    }
 }
 </script>
   
