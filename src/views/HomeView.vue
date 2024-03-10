@@ -13,7 +13,7 @@
       <img class="h-16 w-16" src="https://icons8.com/preloaders/preloaders/1488/Iphone-spinner-2.gif" alt="">
     </div>
     <div class="flex justify-center items-center mt-5" v-else>
-      <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4">
         <div v-for="item in filteredData" :key="item.nomor">
           <div class="bg-white p-4 rounded-lg shadow-md">
             <router-link :to="'/surat/' + item.nomor">
